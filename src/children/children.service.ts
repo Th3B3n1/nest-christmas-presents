@@ -46,7 +46,7 @@ export class ChildrenService {
                 case 'P2025':
                     throw new HttpErrorByCode[404]("Not found");
                 case 'P2016':
-                    throw new HttpErrorByCode[400]("Can't add toy to a bad behaving child")
+                    throw new HttpErrorByCode[400]("Can't add toy to a bad behaving child or the child dosen't exist")
                 default:
                     throw new HttpErrorByCode[400]("Bad request");
             }
