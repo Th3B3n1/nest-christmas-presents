@@ -1,4 +1,4 @@
-import { IsNumber, IsString } from "class-validator";
+import { IsIn, IsNumber, IsString } from "class-validator";
 
 
 export class CreateToyDto {
@@ -6,6 +6,7 @@ export class CreateToyDto {
     name: string;
 
     @IsString()
+    @IsIn(["wood", "metal", "plastic", "other"])
     material: string;
 
     @IsNumber()
